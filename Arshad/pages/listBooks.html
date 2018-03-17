@@ -1,0 +1,14 @@
+<div class="ActivityHead">Books</div>
+
+<input type="text" class="AddBooksTextFields SearchBooksTextFields" placeholder="Search Book" ng-model="search" required/>
+
+<div class="listBookContainer">
+	<div class="ItemBox" ng-repeat="x in listData | filter:{name : search} track by $index">
+		<div class="AuthorName">{{x.author}}
+			<div class="removeBooksSymbol" ng-click="onRemoveBook($index)">X</div>
+		</div>
+		<div class="BookName">{{x.name}}</div>
+		<div class="BookPrice">${{x.price}}</div>
+		<div class="AddToFavourite" ng-click="onFavouriteClick(x)">Add to favourite</div>
+	</div>
+</div>

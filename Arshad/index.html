@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/lib/angular-route.js"></script>
+  <script src="js/core.js"></script>
+</head>
+<body>
+
+<div class="container" ng-app="myApp" ng-controller="myCtrl">
+	<div class="NavigatinContainer">
+		<div class="NavigationHead">Book Store</div>
+		<ul type="none" class="NavigationList">
+			<li class="NavigationListItem">
+				<a class="NavigationCaption" href="#!addBooks">Add Books
+					<div class="AddBooksSymbol">+</div>
+				</a>
+			</li>
+			<li class="NavigationListItem">
+				<a class="NavigationCaption" href="#!listBooks">Books
+						<div class="myGlycon">{{bookCount}}</div>
+				</a>
+			</li>
+			<li class="NavigationListItem">
+				<a class="NavigationCaption" href="#!favourites">Favourites
+					<div class="myGlycon">{{favouriteCount}}</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="ActivityArea" ng-view></div>
+</div>
+
+</body>
+</html>
